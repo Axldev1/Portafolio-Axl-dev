@@ -27,3 +27,26 @@ body {
     height: 330px;
     bottom: 90px;
 }
+.footer{
+  height: 250px;
+}
+ul {
+  list-style: none;
+}
+.lista-footer{
+  position: relative;
+  top: 40px;
+  text-decoration: none;
+  font-size: 19px;
+}
+.p-contacto {
+  position: relative;
+  top: 40px;
+  left: 35px;
+  font-size: 25px;
+}
+.div-prueba{
+  width: 330px;
+    height: 330px;
+    background-color: red;
+}
