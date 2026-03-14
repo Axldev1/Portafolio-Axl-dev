@@ -18,8 +18,8 @@ body {
 }
 .foto-axel {
     position: relative;
-    width: 400px;
-    height: 400px;
+    max-width: 100%;
+    height: auto;
 }
 .footer{
   height: 250px;
@@ -47,4 +47,24 @@ ul {
 .caja-hero-1{
   position: relative;
   top: 100px;
+}
+.hero{
+    height: 750px;
+  }
+/* celular */
+@media (max-width: 575.98px) {
+  .imagen-hero{
+    position: relative;
+    top: 100px;
+    height: 10px;
+    width: 10px;
+  }
+}
+/* tablet */
+@media (min-width: 768px) and (max-width: 991.98px){
+  .foto-axel {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
 }
