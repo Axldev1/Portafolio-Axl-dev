@@ -51,13 +51,18 @@ ul {
 .hero{
     height: 750px;
   }
+.caja{
+   background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;           /* bordes redondeados suaves */
+    padding: 1.5rem;
+}
 /* celular */
 @media (max-width: 575.98px) {
-  .imagen-hero{
+  .foto-hero{
+    width: 180px;
     position: relative;
-    top: 100px;
-    height: 10px;
-    width: 10px;
+    top: 80px;
   }
 }
 /* tablet */
@@ -67,4 +72,10 @@ ul {
     max-width: 100%;
     height: auto;
 }
+.foto-hero{
+    width: 180px;
+    position: relative;
+    top: 80px;
+    right: 250px;
+  }
 }
