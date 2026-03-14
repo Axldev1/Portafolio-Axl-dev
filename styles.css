@@ -16,8 +16,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.container-axel {
-}
 .foto-axel {
     position: relative;
     width: 400px;
@@ -49,4 +47,16 @@ ul {
 .caja-hero-1{
   position: relative;
   top: 100px;
+}
+/* media queries */
+/* tablet */
+@media (max-width: 1024px){
+
+}
+/* celulares */
+@media (max-width: 600px){
+  .hero{
+    display: flex;
+    flex-direction: column;
+  }
 }
