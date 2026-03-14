@@ -1,0 +1,29 @@
+/* animacion */
+body {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: zoomIn 2s ease forwards;
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.axel{
+     background: linear-gradient(90deg, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container-axel {
+  position: relative;
+  top: 200px;
+}
+.foto-axel {
+    position: relative;
+    left: 75%;
+    width: 330px;
+    height: 330px;
+    bottom: 90px;
+}
