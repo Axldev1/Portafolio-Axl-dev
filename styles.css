@@ -17,15 +17,11 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .container-axel {
-  position: relative;
-  top: 200px;
 }
 .foto-axel {
     position: relative;
-    left: 75%;
-    width: 330px;
-    height: 330px;
-    bottom: 90px;
+    width: 400px;
+    height: 400px;
 }
 .footer{
   height: 250px;
@@ -49,4 +45,8 @@ ul {
   width: 330px;
     height: 330px;
     background-color: red;
+}
+.caja-hero-1{
+  position: relative;
+  top: 100px;
 }
