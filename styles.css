@@ -88,6 +88,7 @@ ul {
     width: 180px;
     position: relative;
     top: 80px;
+    display: none;
   }
   .tienes-un-proyecto{
     bottom: 0;
@@ -102,6 +103,7 @@ ul {
     position: relative;
     max-width: 100%;
     height: auto;
+    display: none;
 }
 .foto-hero{
     width: 180px;
