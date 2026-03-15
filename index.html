@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link header" href="#contacto">Contacto</a>
-                    <a class="nav-link header" href="#sobre-mi">Sobre mi</a>
+                    <a class="nav-link header" href="#conocimientos">Conocimientos</a>
                 </div>
             </div>
         </div>
@@ -67,7 +67,7 @@
         </div>
     </section>
 
-    <section class="my-5 cards-conocimientos">
+    <section class="my-5 cards-conocimientos" id="conocimientos">
         <div class="container">
             <h2 class="text-center mb-4">Mis conocimientos</h2>
 
@@ -184,7 +184,7 @@ Landing page moderna hecha con HTML, CSS y Bootstrap.
 
 </div>
 <!-- cards precios -->
- <div class="container my-5">
+ <div class="container my-5" id="precios">
 
 <div class="row justify-content-center card-precios g-4">
 <div class="col-lg-12 col-md-12 col-lg-12 text-center"><h1>Precios</h1></div>
@@ -338,6 +338,103 @@ Landing page moderna hecha con HTML, CSS y Bootstrap.
 
 </div>
 </div>
+<!-- seccion contacto -->
+ <!-- Sección Contacto -->
+<section id="contacto" class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">¿Hablamos de tu proyecto?</h2>
+        <p class="lead text-muted">
+          Estoy listo para ayudarte a llevar tu idea al siguiente nivel. 
+          Escríbeme y en menos de 24h te respondo con una propuesta.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-5">
+      <!-- Columna del formulario -->
+      <div class="col-lg-7">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4 p-md-5">
+            <form id="contactForm" action="https://formspree.io/f/xzdjalpo" method="POST">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label fw-medium">Nombre completo</label>
+                  <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Axel Pereyra" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label fw-medium">Email</label>
+                  <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="hola@axldev.com" required>
+                </div>
+                <div class="col-12">
+                  <label for="subject" class="form-label fw-medium">Asunto / Tipo de proyecto</label>
+                  <input type="text" class="form-control form-control-lg" id="subject" name="subject" placeholder="Landing page, rediseño web..." required>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label fw-medium">Cuéntame más sobre tu idea</label>
+                  <textarea class="form-control form-control-lg" id="message" name="message" rows="6" placeholder="Detalles del proyecto, presupuesto aproximado, plazo deseado..." required></textarea>
+                </div>
+                <!-- Campo oculto para evitar spam (opcional pero recomendado) -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde portafolio Axldev">
+              </div>
+
+              <div class="mt-4">
+                <button type="submit" class="btn btn-primary btn-lg px-5 py-3 fw-semibold">
+                  Enviar mensaje →
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna de info alternativa -->
+      <div class="col-lg-5">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4 p-md-5">
+            <h4 class="fw-bold mb-4">Otras formas de contactarme</h4>
+            
+            <ul class="list-unstyled mb-5">
+              <li class="mb-4 d-flex align-items-start">
+                <i class="bi bi-envelope-fill fs-4 text-primary me-3 mt-1"></i>
+                <div>
+                  <strong>Email</strong><br>
+                  <a href="mailto:hola@axldev.com" class="text-decoration-none">Axelpereyra067@gmail.com</a>
+                </div>
+              </li>
+              <li class="mb-4 d-flex align-items-start">
+                <i class="bi bi-whatsapp fs-4 text-success me-3 mt-1"></i>
+                <div>
+                  <strong>WhatsApp</strong><br>
+                  <a href="https://wa.me/1234567890?text=Hola%20Axel%2C%20vi%20tu%20portafolio..." class="text-decoration-none">+598 92 130 846</a>
+                </div>
+              </li>
+              <li class="mb-4 d-flex align-items-start">
+                <i class="bi bi-linkedin fs-4 text-primary me-3 mt-1"></i>
+                <div>
+                  <strong>LinkedIn</strong><br>
+                  <a href="https://linkedin.com/in/axldev" target="_blank" class="text-decoration-none">@axldev</a>
+                </div>
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="bi bi-github fs-4 text-dark me-3 mt-1"></i>
+                <div>
+                  <strong>GitHub</strong><br>
+                  <a href="https://github.com/Axldev1" target="_blank" class="text-decoration-none">Axldev1</a>
+                </div>
+              </li>
+            </ul>
+
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 </section>
     <footer class="bg-dark text-light py-4 mt-auto">
         <div class="container py-5">
