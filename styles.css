@@ -11,6 +11,10 @@ body {
     transform: scale(1);
   }
 }
+@font-face {
+  font-family: fuente;
+  src: url(fuentes/IosevkaCharonMono-Bold.ttf);
+}
 .axel{
      background: linear-gradient(90deg, #4facfe, #00f2fe);
   -webkit-background-clip: text;
@@ -57,6 +61,27 @@ ul {
     border-radius: 8px;           /* bordes redondeados suaves */
     padding: 1.5rem;
 }
+.tienes-un-proyecto{
+  position: relative;
+  bottom: 150px;
+  height: 270px;
+  background-color: #132238;
+}
+.tienes-una-idea{
+    font-family: fuente;
+    position: relative;
+    top: 30px;
+}
+.contactame{
+  position: relative;
+  top: 40px;
+}
+.cards-conocimientos{
+  position: relative;
+  bottom: 100px;
+  height: 100%;
+}
+
 /* celular */
 @media (max-width: 575.98px) {
   .foto-hero{
@@ -64,6 +89,12 @@ ul {
     position: relative;
     top: 80px;
   }
+  .tienes-un-proyecto{
+    bottom: 0;
+  }
+  .cards-conocimientos{
+    top: 30px;
+}
 }
 /* tablet */
 @media (min-width: 768px) and (max-width: 991.98px){
@@ -77,5 +108,8 @@ ul {
     position: relative;
     top: 80px;
     right: 250px;
+  }
+   .tienes-un-proyecto{
+    bottom: 0;
   }
 }
