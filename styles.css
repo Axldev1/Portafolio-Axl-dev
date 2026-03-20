@@ -5,8 +5,8 @@
 }
 .axel{
      background: linear-gradient(90deg, #4facfe, #00f2fe);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .foto-axel {
     position: relative;
