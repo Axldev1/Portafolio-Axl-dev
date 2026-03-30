@@ -200,6 +200,8 @@ ul {
 .btn:active {
   background-color: rgb(67 56 202 );
 }
+/* animaciones */
+
 /* celular */
 @media (max-width: 575.98px) {
   .foto-hero{
@@ -215,6 +217,66 @@ ul {
     top: 30px;
 }
 }
+/* animacion 1 */
+/* Animación base */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicar a secciones */
+.hero,
+.cards-conocimientos,
+#proyectos,
+#contacto {
+  animation: fadeUp 1s ease forwards;
+}
+/* hover cards */
+.card-conocimientos {
+  transition: all 0.3s ease;
+}
+
+.card-conocimientos:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+/* animacion barrita en el navbar */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* la barrita */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #0d6efd; /* color de la barra */
+  transition: width 0.3s ease;
+}
+
+/* cuando pasas el mouse */
+.nav-link:hover::after {
+  width: 100%;
+}
+
 /* tablet */
 @media (min-width: 768px) and (max-width: 991.98px){
   .foto-axel {
