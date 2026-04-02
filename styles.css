@@ -276,7 +276,41 @@ ul {
 .nav-link:hover::after {
   width: 100%;
 }
+/* ==================== ANIMACIÓN SCROLL ==================== */
 
+/* Estado inicial (invisible) */
+.animar {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Estado visible (animado) */
+.animar.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Puedes agregar diferentes delays para que no aparezcan todas al mismo tiempo */
+.cards-conocimientos {
+    transition-delay: 100ms;
+}
+
+#proyectos {
+    transition-delay: 200ms;
+}
+
+#contacto {
+    transition-delay: 300ms;
+}
+.card-conocimientos.animar {
+    transition-delay: 100ms;
+}
+
+.card-conocimientos.animar:nth-child(2) { transition-delay: 200ms; }
+.card-conocimientos.animar:nth-child(3) { transition-delay: 300ms; }
+.card-conocimientos.animar:nth-child(4) { transition-delay: 400ms; }
+.card-conocimientos.animar:nth-child(5) { transition-delay: 500ms; }
 /* tablet */
 @media (min-width: 768px) and (max-width: 991.98px){
   .foto-axel {

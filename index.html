@@ -6,11 +6,11 @@
     <title>Axl dev</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="images/1688400.ico" type="image/x-icon">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-gradient">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Axldev</a>
@@ -21,13 +21,15 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link header" href="#contacto">Contacto</a>
                     <a class="nav-link header" href="#conocimientos">Conocimientos</a>
+                    <a class="nav-link header" href="#proyectos">Proyectos</a>
+                    <a class="nav-link header" href="#contacto">Contacto</a>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- Hero -->
     <main class="container hero flex-grow-1 animar" id="hero">
         <div class="row align-items-center">
             <div class="col-12 col-lg-8 caja-hero-1 mb-5 mb-lg-0">
@@ -36,25 +38,22 @@
                 <h1 class="axel fs-1">Web developer</h1>
                 <p class="lead">
                     Soy desarrollador web especializado en la creación de sitios modernos, rápidos y profesionales. 
-                    Diseño páginas web atractivas y totalmente adaptadas para celulares, tablets y computadoras, 
-                    asegurando una buena experiencia para todos los usuarios.
+                    Diseño páginas web atractivas y totalmente adaptadas para celulares, tablets y computadoras.
                 </p>
                 <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
-                    <a class="btn btn-primary btn-lg px-4" href="#proyectos">Proyectos</a>
+                    <a class="btn btn-primary btn-lg px-4" href="#proyectos">Ver Proyectos</a>
                     <a class="btn btn-outline-secondary btn-lg px-4" href="#contacto">Contacto</a>
                 </div>
             </div>
             <div class="col-12 col-lg-4 text-center text-lg-end imagen-hero">
-                <img 
-                    src="images/axldev chatgpt.png" 
-                    alt="Axel - Desarrollador Web" 
-                    class="foto-axel img-fluid rounded shadow foto-hero"
-                >
+                <img src="images/axldev chatgpt.png" alt="Axel - Desarrollador Web" 
+                     class="foto-axel img-fluid rounded shadow foto-hero">
             </div>
         </div>
     </main>
 
-    <section class="tienes-un-proyecto">
+    <!-- Sección "¿Tienes un proyecto?" -->
+    <section class="tienes-un-proyecto animar">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 text-white text-center">
@@ -67,266 +66,222 @@
         </div>
     </section>
 
-    <section class="my-5 cards-conocimientos animar" id="conocimientos">
-    <div class="container">
-        <h2 class="text-center mb-5">Mis Conocimientos</h2>
+    <!-- Conocimientos -->
+    <section class="my-5 cards-conocimientos" id="conocimientos">
+        <div class="container">
+            <h2 class="text-center mb-5">Mis Conocimientos</h2>
+            <div class="row g-4 justify-content-center">
 
-        <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card card-conocimientos h-100 text-center shadow-sm animar">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <img src="./svg/bootstrap-svgrepo-com.svg" alt="Bootstrap" style="height: 48px; margin-bottom: 12px;">
+                            <h5 class="card-title mb-2">Bootstrap</h5>
+                            <p class="card-text text-center">Creación de sitios rápidos y responsivos.</p>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Bootstrap -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card card-conocimientos h-100 text-center shadow-sm">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <img src="./svg/bootstrap-svgrepo-com.svg" alt="Bootstrap" style="height: 48px; margin-bottom: 12px;">
-                        <h5 class="card-title mb-2">Bootstrap</h5>
-                        <p class="card-text text-center">
-                            Creación de sitios rápidos y totalmente responsivos usando Grid System y componentes.
-                        </p>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card card-conocimientos h-100 text-center shadow-sm animar">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <img src="./svg/css-3-svgrepo-com.svg" alt="CSS" style="height: 48px; margin-bottom: 12px;">
+                            <h5 class="card-title mb-2">CSS</h5>
+                            <p class="card-text text-center">Diseño de interfaces modernas y animaciones.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card card-conocimientos h-100 text-center shadow-sm animar">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <img src="./images/javascript-svgrepo-com.svg" alt="JavaScript" style="height: 48px; margin-bottom: 12px;">
+                            <h5 class="card-title mb-2">JavaScript</h5>
+                            <p class="card-text text-center">JavaScript + IA como herramienta principal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card card-conocimientos h-100 text-center shadow-sm animar">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <img src="./images/git-svgrepo-com.svg" alt="Git" style="height: 48px; margin-bottom: 12px;">
+                            <h5 class="card-title mb-2">Git</h5>
+                            <p class="card-text text-center">Gestión de versiones con Git y GitHub.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card card-conocimientos h-100 text-center shadow-sm animar">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <img src="./svg/wordpress-color-svgrepo-com.svg" alt="WordPress" style="height: 48px; margin-bottom: 12px;">
+                            <h5 class="card-title mb-2">WordPress</h5>
+                            <p class="card-text text-center">Creación y personalización de sitios web.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="container my-5 animar" id="proyectos">
+        <h2 class="text-center mb-5">Mis Proyectos</h2>
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="card h-100 shadow-sm animar">
+                    <img src="images/snake.png" class="card-img-top" alt="Snake Game">
+                    <div class="card-body">
+                        <h5 class="card-title">Snake Game</h5>
+                        <p class="card-text">Juego clásico desarrollado con HTML, CSS y JavaScript.</p>
+                        <a href="https://axldevsnake.netlify.app/" target="_blank" class="btn btn-primary">Ver proyecto</a>
                     </div>
                 </div>
             </div>
 
-            <!-- CSS -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card card-conocimientos h-100 text-center shadow-sm">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <img src="./svg/css-3-svgrepo-com.svg" alt="CSS" style="height: 48px; margin-bottom: 12px;">
-                        <h5 class="card-title mb-2">CSS</h5>
-                        <p class="card-text text-center">
-                            Diseño de interfaces modernas, animaciones y layouts avanzados.
-                        </p>
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="card h-100 shadow-sm animar">
+                    <img src="images/serendale.png" class="card-img-top" alt="Landing Page">
+                    <div class="card-body">
+                        <h5 class="card-title">Landing Page</h5>
+                        <p class="card-text">Hero de landing page con HTML, CSS y Bootstrap.</p>
+                        <a href="https://herolandingpage.netlify.app/" target="_blank" class="btn btn-primary">Ver proyecto</a>
                     </div>
                 </div>
             </div>
 
-            <!-- JavaScript -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card card-conocimientos h-100 text-center shadow-sm">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <img src="./images/javascript-svgrepo-com.svg" alt="JavaScript" style="height: 48px; margin-bottom: 12px;">
-                        <h5 class="card-title mb-2">JavaScript</h5>
-                        <p class="card-text text-center">
-                            JavaScript + IA. Desarrollo utilizando inteligencia artificial como principal herramienta de apoyo.
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="card h-100 shadow-sm animar">
+                    <img src="./images/coffee.png" class="card-img-top" alt="Coffee House">
+                    <div class="card-body">
+                        <h5 class="card-title">Landing Page Coffee</h5>
+                        <p class="card-text">Hero de landing page con HTML, CSS y Bootstrap.</p>
+                        <a href="https://axldevcoffee.netlify.app/" target="_blank" class="btn btn-primary">Ver proyecto</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Git -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card card-conocimientos h-100 text-center shadow-sm">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <img src="./images/git-svgrepo-com.svg" alt="Git" style="height: 48px; margin-bottom: 12px;">
-                        <h5 class="card-title mb-2">Git</h5>
-                        <p class="card-text text-center">
-                            Gestión de versiones con Git.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- WordPress -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card card-conocimientos h-100 text-center shadow-sm">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <img src="./svg/wordpress-color-svgrepo-com.svg" alt="WordPress" style="height: 48px; margin-bottom: 12px;">
-                        <h5 class="card-title mb-2">WordPress</h5>
-                        <p class="card-text text-center">
-                            Creación y personalización de sitios web con WordPress.
-                        </p>
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="card h-100 shadow-sm animar">
+                    <img src="./images/latana.png" class="card-img-top" alt="Latana">
+                    <div class="card-body">
+                        <h5 class="card-title">Landing Page</h5>
+                        <p class="card-text">Hero de landing page con HTML, CSS y Bootstrap.</p>
+                        <a href="https://axldevlandingpage.netlify.app/" target="_blank" class="btn btn-primary">Ver proyecto</a>
                     </div>
                 </div>
             </div>
 
         </div>
-    </div>
-</section>
-<section class="container my-5 animar" id="proyectos">
+    </section>
 
-<h2 class="text-center mb-5">Mis Proyectos</h2>
-
-<div class="row g-4">
-
-<!-- Proyecto 1 -->
-<div class="col-12 col-md-6 col-lg-6">
-<div class="card h-100 shadow-sm">
-
-<img src="images/snake.png" class="card-img-top" alt="Proyecto">
-
-<div class="card-body">
-<h5 class="card-title">Snake game</h5>
-<p class="card-text">
-Juego Snake desarrollado con HTML, CSS y JavaScript.
-
-
-</p>
-<a href="https://axldevsnake.netlify.app/" target="_blank" class="btn btn-primary">Ver proyecto</a>
-</div>
-
-</div>
-</div>
-
-<!-- Proyecto 2 -->
-<div class="col-12 col-md-6 col-lg-6">
-<div class="card h-100 shadow-sm">
-
-<img src="images/serendale.png" class="card-img-top" alt="Proyecto">
-
-<div class="card-body">
-<h5 class="card-title">Landing Page</h5>
-<p class="card-text">
-Hero de landing page hecha con HTML, CSS y Bootstrap.
-</p>
-<a target="_blank" href="https://herolandingpage.netlify.app/" class="btn btn-primary">Ver proyecto</a>
-</div>
-
-</div>
-</div>
-
-<!-- Proyecto 3 -->
-<div class="col-12 col-md-6 col-lg-6">
-<div class="card h-100 shadow-sm">
-
-<img src="./images/coffee.png" class="card-img-top" alt="Proyecto">
-
-<div class="card-body">
-<h5 class="card-title">Landing Page</h5>
-<p class="card-text">
-Hero de landing page hecha con HTML, CSS y Bootstrap.
-</p>
-<a href='https://axldevcoffee.netlify.app/' target="_blank" class="btn btn-primary">Ver proyecto</a>
-</div>
-
-</div>
-</div>
-
-<!-- Proyecto 4 -->
-<div class="col-12 col-md-6 col-lg-6">
-<div class="card h-100 shadow-sm">
-
-  <img src="./images/latana.png" class="card-img-top" alt="Proyecto">
-
-<div class="card-body">
-<h5 class="card-title">Landing Page</h5>
-<p class="card-text">
-Hero de landing page hecha con HTML, CSS y bootstrap
-</p>
-<a href="https://axldevlandingpage.netlify.app/" class="btn btn-primary" target="_blank">Ver proyecto</a>
-</div>
-
-</div>
-</div>
-
-</div>
-
-
-
- <!-- Sección Contacto -->
+    <!-- Contacto -->
+    <!-- Sección Contacto -->
 <section id="contacto" class="py-5 bg-light animar">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10 text-center mb-5">
-        <h2 class="display-5 fw-bold mb-3">¿Hablamos de tu proyecto?</h2>
-        <p class="lead text-muted">
-          Estoy listo para ayudarte a llevar tu idea al siguiente nivel. 
-          Escríbeme y en menos de 24h te respondo con una propuesta.
-        </p>
-      </div>
-    </div>
-
-    <div class="row g-5">
-      <!-- Columna del formulario -->
-      <div class="col-lg-7">
-        <div class="card border-0 shadow-sm h-100">
-          <div class="card-body p-4 p-md-5">
-            <form id="contactForm" action="https://formspree.io/f/xzdjalpo" method="POST">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="name" class="form-label fw-medium">Nombre completo</label>
-                  <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Axel Pereyra" required>
-                </div>
-                <div class="col-md-6">
-                  <label for="email" class="form-label fw-medium">Email</label>
-                  <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="hola@axldev.com" required>
-                </div>
-                <div class="col-12">
-                  <label for="subject" class="form-label fw-medium">Asunto / Tipo de proyecto</label>
-                  <input type="text" class="form-control form-control-lg" id="subject" name="subject" placeholder="Landing page, rediseño web..." required>
-                </div>
-                <div class="col-12">
-                  <label for="message" class="form-label fw-medium">Cuéntame más sobre tu idea</label>
-                  <textarea class="form-control form-control-lg" id="message" name="message" rows="6" placeholder="Detalles del proyecto, presupuesto aproximado, plazo deseado..." required></textarea>
-                </div>
-                <!-- Campo oculto para evitar spam (opcional pero recomendado) -->
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
-                <input type="hidden" name="_subject" value="Nuevo mensaje desde portafolio Axldev">
-              </div>
-
-              <div class="mt-4">
-                <button type="submit" class="btn btn-primary btn-lg px-5 py-3 fw-semibold">
-                  Enviar mensaje →
-                </button>
-              </div>
-            </form>
-          </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3 animar">¿Hablamos de tu proyecto?</h2>
+                <p class="lead text-muted animar">
+                    Estoy listo para ayudarte a llevar tu idea al siguiente nivel. 
+                    Escríbeme y en menos de 24h te respondo con una propuesta.
+                </p>
+            </div>
         </div>
-      </div>
 
-      <!-- Columna de info alternativa -->
-      <div class="col-lg-5">
-        <div class="card border-0 shadow-sm h-100">
-          <div class="card-body p-4 p-md-5">
-            <h4 class="fw-bold mb-4">Otras formas de contactarme</h4>
-            
-            <ul class="list-unstyled mb-5">
-              <li class="mb-4 d-flex align-items-start">
-                <i class="bi bi-envelope-fill fs-4 text-primary me-3 mt-1"></i>
-                <div>
-                  <strong>Email</strong><br>
-                  <a href="mailto:hola@axldev.com" class="text-decoration-none">Axelpereyra067@gmail.com</a>
-                </div>
-              </li>
-              <li class="mb-4 d-flex align-items-start">
-                <i class="bi bi-whatsapp fs-4 text-success me-3 mt-1"></i>
-                <div>
-                  <strong>WhatsApp</strong><br>
-                  <a href="https://wa.me/1234567890?text=Hola%20Axel%2C%20vi%20tu%20portafolio..." class="text-decoration-none">+598 92 130 846</a>
-                </div>
-              </li>
-              <li class="mb-4 d-flex align-items-start">
-                <i class="bi bi-linkedin fs-4 text-primary me-3 mt-1"></i>
-                <div>
-                  <strong>LinkedIn</strong><br>
-                  <a href="https://linkedin.com/in/axldev" target="_blank" class="text-decoration-none">@axldev</a>
-                </div>
-              </li>
-              <li class="d-flex align-items-start">
-                <i class="bi bi-github fs-4 text-dark me-3 mt-1"></i>
-                <div>
-                  <strong>GitHub</strong><br>
-                  <a href="https://github.com/Axldev1" target="_blank" class="text-decoration-none">Axldev1</a>
-                </div>
-              </li>
-            </ul>
+        <div class="row g-5">
+            <!-- Columna del formulario -->
+            <div class="col-lg-7">
+                <div class="card border-0 shadow-sm h-100 animar">
+                    <div class="card-body p-4 p-md-5">
+                        <form id="contactForm" action="https://formspree.io/f/xzdjalpo" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label fw-medium">Nombre completo</label>
+                                    <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Axel Pereyra" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label fw-medium">Email</label>
+                                    <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="hola@axldev.com" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label fw-medium">Asunto / Tipo de proyecto</label>
+                                    <input type="text" class="form-control form-control-lg" id="subject" name="subject" placeholder="Landing page, rediseño web..." required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label fw-medium">Cuéntame más sobre tu idea</label>
+                                    <textarea class="form-control form-control-lg" id="message" name="message" rows="6" placeholder="Detalles del proyecto, presupuesto aproximado, plazo deseado..." required></textarea>
+                                </div>
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
+                                <input type="hidden" name="_subject" value="Nuevo mensaje desde portafolio Axldev">
+                            </div>
 
-            <hr class="my-4">
-          </div>
+                            <div class="mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg px-5 py-3 fw-semibold">
+                                    Enviar mensaje →
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna de info alternativa -->
+            <div class="col-lg-5">
+                <div class="card border-0 shadow-sm h-100 animar">
+                    <div class="card-body p-4 p-md-5">
+                        <h4 class="fw-bold mb-4">Otras formas de contactarme</h4>
+                        
+                        <ul class="list-unstyled mb-5">
+                            <li class="mb-4 d-flex align-items-start">
+                                <i class="bi bi-envelope-fill fs-4 text-primary me-3 mt-1"></i>
+                                <div>
+                                    <strong>Email</strong><br>
+                                    <a href="mailto:hola@axldev.com" class="text-decoration-none">Axelpereyra067@gmail.com</a>
+                                </div>
+                            </li>
+                            <li class="mb-4 d-flex align-items-start">
+                                <i class="bi bi-whatsapp fs-4 text-success me-3 mt-1"></i>
+                                <div>
+                                    <strong>WhatsApp</strong><br>
+                                    <a href="https://wa.me/1234567890?text=Hola%20Axel%2C%20vi%20tu%20portafolio..." class="text-decoration-none">+598 92 130 846</a>
+                                </div>
+                            </li>
+                            <li class="mb-4 d-flex align-items-start">
+                                <i class="bi bi-linkedin fs-4 text-primary me-3 mt-1"></i>
+                                <div>
+                                    <strong>LinkedIn</strong><br>
+                                    <a href="https://linkedin.com/in/axldev" target="_blank" class="text-decoration-none">@axldev</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="bi bi-github fs-4 text-dark me-3 mt-1"></i>
+                                <div>
+                                    <strong>GitHub</strong><br>
+                                    <a href="https://github.com/Axldev1" target="_blank" class="text-decoration-none">Axldev1</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <hr class="my-4">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
-</section>
+
+    <!-- Footer -->
     <footer class="bg-dark text-light py-4 mt-auto">
         <div class="container py-5">
             <div class="row text-center text-md-start">
-                <!-- Columna 1 -->
                 <div class="col-md-4 mb-3">
                     <h5>Axl Dev</h5>
                     <p>Desarrollador web especializado en sitios modernos y responsive.</p>
                 </div>
-
-                <!-- Columna 2 -->
                 <div class="col-md-4 mb-3">
                     <h5>Redes</h5>
                     <ul class="list-unstyled">
@@ -336,14 +291,13 @@ Hero de landing page hecha con HTML, CSS y bootstrap
                     </ul>
                 </div>
             </div>
-
-            <!-- Copyright -->
             <div class="text-center pt-3 border-top">
                 <p class="mb-0">© 2026 Axl Dev</p>
             </div>
         </div>
     </footer>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
