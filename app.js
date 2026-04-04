@@ -1,57 +1,117 @@
-// ==================== SMOOTH SCROLL ====================
+// ============================================
+//  NAVBAR — efecto al hacer scroll
+// ============================================
+const nav = document.getElementById('siteNav');
+if (nav) {
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+}
 
-document.addEventListener("DOMContentLoaded", () => {
+// ============================================
+//  SCROLL REVEAL — Reinicia animaciones al subir
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
 
-    // Seleccionamos todos los enlaces que tienen href empezando con #
-    const links = document.querySelectorAll('a[href^="#"]');
+    const animEls = document.querySelectorAll('.animar');
 
-    links.forEach(link => {
-        link.addEventListener("click", function(e) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                // Reinicia la animación cuando el elemento sale de la vista (al subir)
+                if (window.scrollY < entry.target.getBoundingClientRect().top + window.scrollY) {
+                    entry.target.classList.remove('visible');
+                }
+            }
+        });
+    }, {
+        threshold: 0.15,           // Se activa un poco antes
+        rootMargin: '-50px 0px -80px 0px'
+    });
 
-            // Prevenimos el comportamiento por defecto
+    animEls.forEach(el => {
+        observer.observe(el);
+        
+        // Forzar reinicio inicial
+        el.classList.remove('visible');
+    });
+});
+
+// ============================================
+//  SMOOTH SCROLL para links con #
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+    const navHeight = 80;
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', e => {
+            const id = link.getAttribute('href').slice(1);
+            if (!id) return;
+            const target = document.getElementById(id);
+            if (!target) return;
             e.preventDefault();
 
-            // Obtenemos el ID del destino
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
+            window.scrollTo({
+                top: target.getBoundingClientRect().top + window.scrollY - navHeight,
+                behavior: 'smooth'
+            });
 
-            if (targetElement) {
-                // Calculamos la posición considerando el navbar fijo
-                const navbarHeight = 80; // Ajusta este valor según la altura de tu navbar
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.scrollY - navbarHeight;
-
-                // Scroll suave
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
+            // Cerrar navbar móvil si está abierta
+            const collapse = document.getElementById('navMenu');
+            if (collapse && collapse.classList.contains('show')) {
+                bootstrap.Collapse.getInstance(collapse)?.hide();
             }
         });
     });
 });
-// ==================== ANIMACIÓN AL HACER SCROLL ====================
 
-document.addEventListener("DOMContentLoaded", () => {
+// ============================================
+//  FEEDBACK del formulario
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
 
-    const animatedSections = document.querySelectorAll('.animar');
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        const original = btn.innerHTML;
 
-    const observerOptions = {
-        threshold: 0.15,        // Se activa cuando el 15% de la sección es visible
-        rootMargin: "0px 0px -50px 0px"
-    };
+        btn.innerHTML = 'Enviando... <span class="spinner-border spinner-border-sm ms-2"></span>';
+        btn.disabled = true;
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                // Opcional: dejar de observar después de animar
-                // observer.unobserve(entry.target);
+        try {
+            const res = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (res.ok) {
+                btn.innerHTML = '✓ Mensaje enviado';
+                btn.style.background = '#00FF94';
+                btn.style.color = '#080B0F';
+                form.reset();
+
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    btn.style.background = '';
+                    btn.style.color = '';
+                    btn.disabled = false;
+                }, 3500);
+            } else {
+                throw new Error();
             }
-        });
-    }, observerOptions);
-
-    animatedSections.forEach(section => {
-        observer.observe(section);
+        } catch {
+            btn.innerHTML = 'Error — intenta de nuevo';
+            btn.style.background = '#ff4d4d';
+            setTimeout(() => {
+                btn.innerHTML = original;
+                btn.style.background = '';
+                btn.disabled = false;
+            }, 3000);
+        }
     });
 });

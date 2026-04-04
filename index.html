@@ -3,125 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Axl dev</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="images/1688400.ico" type="image/x-icon">
+    <title>Axl Dev — Web Developer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/1688400.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body>
 
-    
-
-    <!-- Hero -->
-    <!-- Hero Section - Alineación perfecta con Bootstrap -->
-<main class="container hero flex-grow-1 animar" id="hero">
-    <div class="row align-items-center min-vh-100">   <!-- Clave: min-vh-100 + align-items-center -->
-
-        <!-- Columna Izquierda - Texto y botones -->
-        <div class="col-12 col-lg-7">
-            <div class="pe-lg-5">   <!-- Padding a la derecha en pantallas grandes -->
-                <span class="display-2 fw-bold axel">Hola, soy</span>
-                <span class="axel display-2 fw-bold">AXEL</span>
-                <h1 class="axel fs-1">Web developer</h1>
-                <p class="lead">
-                    Soy desarrollador web especializado en la creación de sitios modernos, rápidos y profesionales. 
-                    Diseño páginas web atractivas y totalmente adaptadas para celulares, tablets y computadoras.
-                </p>
-                <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
-                    <a class="btn btn-primary btn-lg px-4" href="#proyectos">Ver Proyectos</a>
-                    <a class="btn btn-outline-secondary btn-lg px-4" href="#contacto">Contacto</a>
-                </div>
+    <!-- NAVBAR -->
+    <nav class="site-nav navbar navbar-expand-lg fixed-top" id="siteNav">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand nav-logo" href="#">
+                <span class="logo-bracket">&lt;</span>axldev<span class="logo-bracket">/&gt;</span>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto gap-lg-4 py-3 py-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#conocimientos">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn-hire" href="#contacto">Contrátame</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <!-- Columna Derecha - Imagen -->
-        <div class="col-12 col-lg-5 text-center text-lg-end">
-            <div class="d-flex justify-content-center justify-content-lg-end align-items-center h-100">
-                <img 
-                    src="images/axldev chatgpt.png" 
-                    alt="Axel - Desarrollador Web" 
-                    class="foto-axel img-fluid rounded shadow"
-                >
-            </div>
-        </div>
+    <!-- HERO -->
+    <section class="hero d-flex align-items-center position-relative overflow-hidden" id="hero">
+        <div class="hero-grid position-absolute inset-0"></div>
+        <div class="hero-glow position-absolute"></div>
 
-    </div>
-</main>
+        <div class="container position-relative z-2">
+            <div class="row align-items-center min-vh-100 py-5">
 
-    <!-- Sección "¿Tienes un proyecto?" -->
-    <section class="tienes-un-proyecto animar">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 text-white text-center">
-                    <h1 class="tienes-una-idea">¿Tienes una idea para un proyecto? <br>Contáctame</h1>
+                <div class="col-lg-7 hero-text">
+                    <p class="hero-tag animar">
+                        <span class="tag-dot"></span>
+                        Disponible para proyectos
+                    </p>
+                    <h1 class="hero-title animar">
+                        Hola, soy<br>
+                        <span class="gradient-text">AXEL</span>
+                    </h1>
+                    <p class="hero-role animar"><span class="mono">~/</span> Web Developer</p>
+                    <p class="hero-desc animar">
+                        Especializado en la creación de sitios modernos, rápidos y profesionales.
+                        Diseño páginas web atractivas y totalmente adaptadas para todos los dispositivos.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 mt-5 animar">
+                        <a href="#proyectos" class="btn-primary-cyan">Ver Proyectos <i class="bi bi-arrow-right ms-2"></i></a>
+                        <a href="#contacto" class="btn-outline-cyan">Contacto</a>
+                    </div>
+
+                    <div class="hero-stats d-flex gap-4 mt-5 pt-4 animar">
+                        <div class="stat">
+                            <span class="stat-num">4+</span>
+                            <span class="stat-label">Proyectos</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-label">Responsive</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <span class="stat-num">&lt;24h</span>
+                            <span class="stat-label">Respuesta</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 text-center">
-                    <a href="#contacto" class="btn btn-primary contactame">Contacto</a>
-                </div> 
+
+                <div class="col-lg-5 d-none d-lg-flex justify-content-center align-items-center">
+                    <div class="hero-img-wrap animar">
+                        <div class="img-ring"></div>
+                        <img src="images/axldev chatgpt.png" alt="Axel Dev" class="hero-photo">
+                        <div class="img-badge">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Conocimientos -->
-    <section class="my-5" id="conocimientos">
-        <div class="container cards-conocimientos">
-            <h2 class="text-center mb-5 animar">Mis Conocimientos</h2>
+
+
+    <!-- CTA BAND -->
+    <section class="cta-band py-5 animar">
+        <div class="container">
+            <div class="cta-inner d-flex flex-column flex-md-row align-items-center justify-content-between gap-4">
+                <div>
+                    <p class="mono mb-1" style="color:var(--cyan);font-size:.75rem;letter-spacing:.2em">// LISTO PARA TRABAJAR</p>
+                    <h2 class="cta-title mb-0">¿Tienes una idea para un proyecto?</h2>
+                </div>
+                <a href="#contacto" class="btn-primary-cyan flex-shrink-0">Contáctame <i class="bi bi-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills-section py-5" id="conocimientos">
+        <div class="container py-5">
+            <div class="section-header text-center mb-5 animar">
+                <p class="section-label">Stack técnico</p>
+                <h2 class="section-title">Mis <span class="gradient-text">Conocimientos</span></h2>
+                <div class="title-rule mx-auto mt-3"></div>
+            </div>
+
             <div class="row g-4 justify-content-center">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-conocimientos h-100 text-center shadow-sm animar">
-                        <div class="card-body d-flex flex-column align-items-center">
-                            <img src="./images/html-5-svgrepo-com.svg" alt="Bootstrap" style="height: 48px; margin-bottom: 12px;">
-                            <h5 class="card-title mb-2">HTML</h5>
-                            <p class="card-text text-center">Maquetación profesional de sitios web.</p>
-                        </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card animar text-center">
+                        <img src="./images/html-5-svgrepo-com.svg" alt="HTML" class="skill-icon">
+                        <span class="skill-name">HTML</span>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-conocimientos h-100 text-center shadow-sm animar">
-                        <div class="card-body d-flex flex-column align-items-center">
-                            <img src="./svg/bootstrap-svgrepo-com.svg" alt="Bootstrap" style="height: 48px; margin-bottom: 12px;">
-                            <h5 class="card-title mb-2">Bootstrap</h5>
-                            <p class="card-text text-center">Creación de sitios rápidos y responsivos.</p>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card animar text-center">
+                        <img src="./svg/css-3-svgrepo-com.svg" alt="CSS" class="skill-icon">
+                        <span class="skill-name">CSS</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card animar text-center">
+                        <img src="./images/javascript-svgrepo-com.svg" alt="JavaScript" class="skill-icon">
+                        <span class="skill-name">JavaScript (IA)</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card animar text-center">
+                        <img src="./svg/bootstrap-svgrepo-com.svg" alt="Bootstrap" class="skill-icon">
+                        <span class="skill-name">Bootstrap</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card animar text-center">
+                        <img src="./images/git-svgrepo-com.svg" alt="Git" class="skill-icon">
+                        <span class="skill-name">Git</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card animar text-center">
+                        <img src="./svg/wordpress-color-svgrepo-com.svg" alt="WordPress" class="skill-icon">
+                        <span class="skill-name">WordPress</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="projects-section py-5" id="proyectos">
+        <div class="container py-5">
+            <div class="section-header text-center mb-5 animar">
+                <p class="section-label">Trabajo reciente</p>
+                <h2 class="section-title">Mis <span class="gradient-text">Proyectos</span></h2>
+                <div class="title-rule mx-auto mt-3"></div>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-6 animar">
+                    <div class="project-card h-100">
+                        <div class="project-card__img">
+                            <img src="./images/steel series.png" alt="SteelSeries">
+                            <div class="project-card__overlay">
+                                <a href="https://axldevsteelseries.netlify.app/" target="_blank" class="project-link">
+                                    <i class="bi bi-box-arrow-up-right"></i> Ver proyecto
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="project-tag">Landing Page</span>
+                                <a href="https://axldevsteelseries.netlify.app/" target="_blank" class="project-arrow"><i class="bi bi-arrow-up-right"></i></a>
+                            </div>
+                            <h3 class="project-title">Steel Series</h3>
+                            <p class="project-desc">Landing page completa de Steel series.</p>
+                            <div class="project-stack d-flex gap-2 flex-wrap mt-3">
+                                <span class="stack-tag">HTML</span>
+                                <span class="stack-tag">CSS</span>
+                                <span class="stack-tag">Bootstrap</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-conocimientos h-100 text-center shadow-sm animar">
-                        <div class="card-body d-flex flex-column align-items-center">
-                            <img src="./svg/css-3-svgrepo-com.svg" alt="CSS" style="height: 48px; margin-bottom: 12px;">
-                            <h5 class="card-title mb-2">CSS</h5>
-                            <p class="card-text text-center">Diseño de interfaces modernas y animaciones.</p>
+                <div class="col-md-6 animar">
+                    <div class="project-card h-100">
+                        <div class="project-card__img">
+                            <img src="images/serendale.png" alt="Serendale">
+                            <div class="project-card__overlay">
+                                <a href="https://herolandingpage.netlify.app/" target="_blank" class="project-link">
+                                    <i class="bi bi-box-arrow-up-right"></i> Ver proyecto
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="project-tag">Landing Page</span>
+                                <a href="https://herolandingpage.netlify.app/" target="_blank" class="project-arrow"><i class="bi bi-arrow-up-right"></i></a>
+                            </div>
+                            <h3 class="project-title">Serendale</h3>
+                            <p class="project-desc">Landing page completa Serendale.</p>
+                            <div class="project-stack d-flex gap-2 flex-wrap mt-3">
+                                <span class="stack-tag">HTML</span>
+                                <span class="stack-tag">CSS</span>
+                                <span class="stack-tag">Bootstrap</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-conocimientos h-100 text-center shadow-sm animar">
-                        <div class="card-body d-flex flex-column align-items-center">
-                            <img src="./images/javascript-svgrepo-com.svg" alt="JavaScript" style="height: 48px; margin-bottom: 12px;">
-                            <h5 class="card-title mb-2">JavaScript</h5>
-                            <p class="card-text text-center">JavaScript + IA como herramienta principal.</p>
+                <div class="col-md-6 animar">
+                    <div class="project-card h-100">
+                        <div class="project-card__img">
+                            <img src="./images/coffee.png" alt="Coffee House">
+                            <div class="project-card__overlay">
+                                <a href="https://axldevcoffee.netlify.app/" target="_blank" class="project-link">
+                                    <i class="bi bi-box-arrow-up-right"></i> Ver proyecto
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="project-tag">Landing Page</span>
+                                <a href="https://axldevcoffee.netlify.app/" target="_blank" class="project-arrow"><i class="bi bi-arrow-up-right"></i></a>
+                            </div>
+                            <h3 class="project-title">Coffee House</h3>
+                            <p class="project-desc">Landing page completa de cafeteria.</p>
+                            <div class="project-stack d-flex gap-2 flex-wrap mt-3">
+                                <span class="stack-tag">HTML</span>
+                                <span class="stack-tag">CSS</span>
+                                <span class="stack-tag">Bootstrap</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-conocimientos h-100 text-center shadow-sm animar">
-                        <div class="card-body d-flex flex-column align-items-center">
-                            <img src="./images/git-svgrepo-com.svg" alt="Git" style="height: 48px; margin-bottom: 12px;">
-                            <h5 class="card-title mb-2">Git</h5>
-                            <p class="card-text text-center">Gestión de versiones con Git y GitHub.</p>
+                <div class="col-md-6 animar">
+                    <div class="project-card h-100">
+                        <div class="project-card__img">
+                            <img src="./images/latana.png" alt="Latana">
+                            <div class="project-card__overlay">
+                                <a href="https://axldevlandingpage.netlify.app/" target="_blank" class="project-link">
+                                    <i class="bi bi-box-arrow-up-right"></i> Ver proyecto
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-conocimientos h-100 text-center shadow-sm animar">
-                        <div class="card-body d-flex flex-column align-items-center">
-                            <img src="./svg/wordpress-color-svgrepo-com.svg" alt="WordPress" style="height: 48px; margin-bottom: 12px;">
-                            <h5 class="card-title mb-2">WordPress</h5>
-                            <p class="card-text text-center">Creación y personalización de sitios web.</p>
+                        <div class="project-card__body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="project-tag">Landing Page</span>
+                                <a href="https://axldevlandingpage.netlify.app/" target="_blank" class="project-arrow"><i class="bi bi-arrow-up-right"></i></a>
+                            </div>
+                            <h3 class="project-title">Latana</h3>
+                            <p class="project-desc">Hero de landing page.</p>
+                            <div class="project-stack d-flex gap-2 flex-wrap mt-3">
+                                <span class="stack-tag">HTML</span>
+                                <span class="stack-tag">CSS</span>
+                                <span class="stack-tag">Bootstrap</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -130,176 +279,121 @@
         </div>
     </section>
 
-    <!-- Proyectos -->
-    <section class="container my-5 animar" id="proyectos">
-        <div class="container proyectos">
-            <h2 class="text-center mb-5 animar">Mis Proyectos</h2>
-        <div class="row g-4">
-
-            <div class="col-12 col-md-6 col-lg-6">
-                <div class="card h-100 shadow-sm animar">
-                    <img src="./images/steel series.png" card-img-top alt="Snake Game">
-                    <div class="card-body">
-                        <h5 class="card-title">Steel series landing page</h5>
-                        <p class="card-text">Landing page completa desarrollada con HTML, bootstrap y CSS.</p>
-                        <a href="https://axldevsteelseries.netlify.app/" target="_blank" class="btn btn-primary">Ver proyecto</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-6">
-                <div class="card h-100 shadow-sm animar">
-                    <img src="images/serendale.png" class="card-img-top" alt="Landing Page">
-                    <div class="card-body">
-                        <h5 class="card-title">Landing Page Serendale</h5>
-                        <p class="card-text">Hero de landing page con HTML, CSS y Bootstrap.</p>
-                        <a href="https://herolandingpage.netlify.app/" target="_blank" class="btn btn-primary">Ver proyecto</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-6">
-                <div class="card h-100 shadow-sm animar">
-                    <img src="./images/coffee.png" class="card-img-top" alt="Coffee House">
-                    <div class="card-body">
-                        <h5 class="card-title">Landing Page Coffee</h5>
-                        <p class="card-text">Landing page completa con HTML, CSS y Bootstrap.</p>
-                        <a href="https://axldevcoffee.netlify.app/" target="_blank" class="btn btn-primary">Ver proyecto</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-6">
-                <div class="card h-100 shadow-sm animar">
-                    <img src="./images/latana.png" class="card-img-top" alt="Latana">
-                    <div class="card-body">
-                        <h5 class="card-title">Landing Page Latana</h5>
-                        <p class="card-text">Hero de landing page con HTML, CSS y Bootstrap.</p>
-                        <a href="https://axldevlandingpage.netlify.app/" target="_blank" class="btn btn-primary">Ver proyecto</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        </div>
-
-    </section>
-
-    <!-- Contacto -->
-    <!-- Sección Contacto -->
-<section id="contacto" class="py-5 bg-light animar">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10 text-center mb-5">
-                <h2 class="display-5 fw-bold mb-3 animar">¿Hablamos de tu proyecto?</h2>
-                <p class="lead text-muted animar">
-                    Estoy listo para ayudarte a llevar tu idea al siguiente nivel. 
-                    Escríbeme y en menos de 24h te respondo con una propuesta.
+    <!-- CONTACTO -->
+    <section class="contact-section py-5" id="contacto">
+        <div class="container py-5">
+            <div class="section-header text-center mb-5 animar">
+                <p class="section-label">Trabajemos juntos</p>
+                <h2 class="section-title">¿<span class="gradient-text">Hablamos</span> de tu proyecto?</h2>
+                <div class="title-rule mx-auto mt-3"></div>
+                <p class="contact-sub mt-4 mx-auto animar">
+                    Estoy listo para ayudarte a llevar tu idea al siguiente nivel.
+                    Escríbeme y en menos de 24h te respondo.
                 </p>
             </div>
-        </div>
 
-        <div class="row g-5">
-            <!-- Columna del formulario -->
-            <div class="col-lg-7">
-                <div class="card border-0 shadow-sm h-100 animar">
-                    <div class="card-body p-4 p-md-5">
+            <div class="row g-4 animar">
+
+                <!-- Formulario -->
+                <div class="col-lg-7">
+                    <div class="contact-form-card">
                         <form id="contactForm" action="https://formspree.io/f/xzdjalpo" method="POST">
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <label for="name" class="form-label fw-medium">Nombre completo</label>
-                                    <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Axel Pereyra" required>
+                                    <label class="form-label mono-label">Nombre completo</label>
+                                    <input type="text" class="form-control contact-input" name="name" placeholder="Axel Pereyra" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="email" class="form-label fw-medium">Email</label>
-                                    <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="hola@axldev.com" required>
+                                    <label class="form-label mono-label">Email</label>
+                                    <input type="email" class="form-control contact-input" name="email" placeholder="hola@axldev.com" required>
                                 </div>
                                 <div class="col-12">
-                                    <label for="subject" class="form-label fw-medium">Asunto / Tipo de proyecto</label>
-                                    <input type="text" class="form-control form-control-lg" id="subject" name="subject" placeholder="Landing page, rediseño web..." required>
+                                    <label class="form-label mono-label">Asunto</label>
+                                    <input type="text" class="form-control contact-input" name="subject" placeholder="Landing page, rediseño web..." required>
                                 </div>
                                 <div class="col-12">
-                                    <label for="message" class="form-label fw-medium">Cuéntame más sobre tu idea</label>
-                                    <textarea class="form-control form-control-lg" id="message" name="message" rows="6" placeholder="Detalles del proyecto, presupuesto aproximado, plazo deseado..." required></textarea>
+                                    <label class="form-label mono-label">Mensaje</label>
+                                    <textarea class="form-control contact-input" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
                                 </div>
                                 <input type="hidden" name="_captcha" value="false">
-                                <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
                                 <input type="hidden" name="_subject" value="Nuevo mensaje desde portafolio Axldev">
                             </div>
-
                             <div class="mt-4">
-                                <button type="submit" class="btn btn-primary btn-lg px-5 py-3 fw-semibold">
-                                    Enviar mensaje →
+                                <button type="submit" class="btn-primary-cyan w-100 justify-content-center">
+                                    Enviar mensaje <i class="bi bi-send ms-2"></i>
                                 </button>
                             </div>
                         </form>
                     </div>
                 </div>
-            </div>
 
-            <!-- Columna de info alternativa -->
-            <div class="col-lg-5">
-                <div class="card border-0 shadow-sm h-100 animar">
-                    <div class="card-body p-4 p-md-5">
-                        <h4 class="fw-bold mb-4">Otras formas de contactarme</h4>
-                        
-                        <ul class="list-unstyled mb-5">
-                            <li class="mb-4 d-flex align-items-start">
-                                <i class="bi bi-envelope-fill fs-4 text-primary me-3 mt-1"></i>
-                                <div>
-                                    <strong>Email</strong><br>
-                                    <a href="mailto:hola@axldev.com" class="text-decoration-none">Axelpereyra067@gmail.com</a>
-                                </div>
+                <!-- Info -->
+                <div class="col-lg-5">
+                    <div class="contact-info-card h-100">
+                        <h4 class="info-title mb-4">Otras formas de contactarme</h4>
+                        <ul class="list-unstyled contact-list">
+                            <li>
+                                <a href="mailto:Axelpereyra067@gmail.com" class="contact-item d-flex align-items-center gap-3">
+                                    <div class="contact-icon"><i class="bi bi-envelope-fill"></i></div>
+                                    <div>
+                                        <span class="ci-label d-block">Email</span>
+                                        <span class="ci-value">Axelpereyra067@gmail.com</span>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="mb-4 d-flex align-items-start">
-                                <i class="bi bi-whatsapp fs-4 text-success me-3 mt-1"></i>
-                                <div>
-                                    <strong>WhatsApp</strong><br>
-                                    <a href="https://wa.me/1234567890?text=Hola%20Axel%2C%20vi%20tu%20portafolio..." class="text-decoration-none">+598 92 130 846</a>
-                                </div>
+                            <li>
+                                <a href="https://wa.me/59892130846" target="_blank" class="contact-item d-flex align-items-center gap-3">
+                                    <div class="contact-icon contact-icon--green"><i class="bi bi-whatsapp"></i></div>
+                                    <div>
+                                        <span class="ci-label d-block">WhatsApp</span>
+                                        <span class="ci-value">+598 92 130 846</span>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="mb-4 d-flex align-items-start">
-                                <i class="bi bi-linkedin fs-4 text-primary me-3 mt-1"></i>
-                                <div>
-                                    <strong>LinkedIn</strong><br>
-                                    <a href="https://linkedin.com/in/axldev" target="_blank" class="text-decoration-none">@axldev</a>
-                                </div>
+                            <li>
+                                <a href="https://linkedin.com/in/axldev" target="_blank" class="contact-item d-flex align-items-center gap-3">
+                                    <div class="contact-icon contact-icon--blue"><i class="bi bi-linkedin"></i></div>
+                                    <div>
+                                        <span class="ci-label d-block">LinkedIn</span>
+                                        <span class="ci-value">@axldev</span>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="d-flex align-items-start">
-                                <i class="bi bi-github fs-4 text-dark me-3 mt-1"></i>
-                                <div>
-                                    <strong>GitHub</strong><br>
-                                    <a href="https://github.com/Axldev1" target="_blank" class="text-decoration-none">Axldev1</a>
-                                </div>
+                            <li>
+                                <a href="https://github.com/Axldev1" target="_blank" class="contact-item d-flex align-items-center gap-3">
+                                    <div class="contact-icon"><i class="bi bi-github"></i></div>
+                                    <div>
+                                        <span class="ci-label d-block">GitHub</span>
+                                        <span class="ci-value">Axldev1</span>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
-                        <hr class="my-4">
                     </div>
                 </div>
+
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-4 mt-auto">
-        <div class="container py-5">
-            <div class="row text-center text-md-start">
-                <div class="col-md-4 mb-3">
-                    <h5>Axl Dev</h5>
-                    <p>Desarrollador web especializado en sitios modernos y responsive.</p>
+    <!-- FOOTER -->
+    <footer class="site-footer py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-md-4">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>axldev<span class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p class="footer-sub mt-2">Desarrollador web · Sitios modernos y responsive</p>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Redes</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="https://www.instagram.com/axldev01/" class="text-light text-decoration-none" target="_blank">Instagram</a></li>
-                        <li><a href="https://www.linkedin.com/in/axldev/" class="text-light text-decoration-none" target="_blank">LinkedIn</a></li>
-                        <li><a href="https://github.com/Axldev1" class="text-light text-decoration-none" target="_blank">Github</a></li>
-                    </ul>
+                <div class="col-md-4 text-center">
+                    <p class="footer-copy mb-0">© 2026 Axl Dev.</p>
                 </div>
-            </div>
-            <div class="text-center pt-3 border-top">
-                <p class="mb-0">© 2026 Axl Dev</p>
+                <div class="col-md-4 d-flex justify-content-md-end gap-3">
+                    <a href="https://www.instagram.com/axldev01/" target="_blank" class="footer-social"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/axldev/" target="_blank" class="footer-social"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/Axldev1" target="_blank" class="footer-social"><i class="bi bi-github"></i></a>
+                </div>
             </div>
         </div>
     </footer>
