@@ -1,75 +1,94 @@
+/* ============================================
+   FUENTES
+============================================ */
 @font-face {
   font-family: fuente;
   src: url(fuentes/IosevkaCharonMono-Bold.ttf);
 }
-.axel{
-     background: linear-gradient(90deg, #4facfe, #00f2fe);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+/* ============================================
+   ESTILOS GENERALES
+============================================ */
+.axel {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-
-.footer{
+.footer {
   height: 250px;
 }
+
 ul {
   list-style: none;
 }
-.lista-footer{
+
+.lista-footer {
   position: relative;
   top: 40px;
   text-decoration: none;
   font-size: 19px;
 }
+
 .p-contacto {
   position: relative;
   top: 40px;
   left: 35px;
   font-size: 25px;
 }
-.div-prueba{
+
+.div-prueba {
   width: 330px;
-    height: 330px;
-    background-color: red;
+  height: 330px;
+  background-color: red;
 }
-.caja-hero-1{
+
+.caja-hero-1 {
   position: relative;
   top: 100px;
 }
-.hero{
-    height: 750px;
-  }
-.caja{
-   background-color: white;
-    border: 2px solid black;
-    border-radius: 8px;           /* bordes redondeados suaves */
-    padding: 1.5rem;
+
+.hero {
+  height: 750px;
 }
-.tienes-un-proyecto{
+
+.caja {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.tienes-un-proyecto {
   margin-top: 220px;
   height: 270px;
   background-color: #132238;
 }
-.tienes-una-idea{
-    font-family: fuente;
-    position: relative;
-    top: 30px;
+
+.tienes-una-idea {
+  font-family: fuente;
+  position: relative;
+  top: 30px;
 }
-.contactame{
+
+.contactame {
   position: relative;
   top: 40px;
 }
-.cards-conocimientos{
+
+.cards-conocimientos {
   margin-top: 150px;
   height: 100%;
 }
 
-
-.card-precios{
+.card-precios {
   position: relative;
   top: 50px;
 }
 
+/* ============================================
+   TARJETAS DE PRECIOS
+============================================ */
 .pack_card {
   position: relative;
   display: flex;
@@ -113,13 +132,13 @@ ul {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
-  color: rgb(31 41 55 );
+  color: rgb(31 41 55);
 }
 
 .description {
   margin: 0 auto 2rem auto;
   text-align: center;
-  color: rgb(107 114 128 );
+  color: rgb(107 114 128);
 }
 
 .lists > :not([hidden]) ~ :not([hidden]) {
@@ -139,7 +158,7 @@ ul {
 }
 
 .list span {
-  color: rgb( 75 85 99 );
+  color: rgb(75 85 99);
 }
 
 .bottom {
@@ -158,24 +177,24 @@ ul {
 
 .devise {
   align-self: flex-start;
-  color: rgb( 75 85 99 );
+  color: rgb(75 85 99);
 }
 
 .price {
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: 700;
-  color: rgb(31 41 55 );
+  color: rgb(31 41 55);
 }
 
 .date {
-  color: rgb(107 114 128 );
+  color: rgb(107 114 128);
 }
 
 .btn {
   display: block;
   border-radius: 0.5rem;
-  background-color: rgb(99 102 241 );
+  background-color: rgb(99 102 241);
   padding: 0.75rem 2rem;
   text-align: center;
   font-size: 0.875rem;
@@ -188,22 +207,16 @@ ul {
 }
 
 .btn:hover {
-  background-color: rgb(79 70 229 );
+  background-color: rgb(79 70 229);
 }
 
 .btn:active {
-  background-color: rgb(67 56 202 );
+  background-color: rgb(67 56 202);
 }
-/* animaciones */
 
-/* celular */
-@media (max-width: 575.98px) {
-  .foto-axel{
-    display: none;
-  }
-}
-/* animacion 1 */
-/* Animación base */
+/* ============================================
+   ANIMACIONES
+============================================ */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -215,14 +228,13 @@ ul {
   }
 }
 
-/* Aplicar a secciones */
 .hero,
 .cards-conocimientos,
 #proyectos,
 #contacto {
   animation: fadeUp 1s ease forwards;
 }
-/* hover cards */
+
 .card-conocimientos {
   transition: all 0.3s ease;
 }
@@ -232,22 +244,23 @@ ul {
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-.proyectos{
+.proyectos {
   margin-top: 200px;
 }
+
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-15px); }
   100% { transform: translateY(0px); }
 }
-/* animacion barrita en el navbar */
+
+/* Animación de barra en navbar */
 .nav-link {
   position: relative;
   display: inline-block;
   padding-bottom: 5px;
 }
 
-/* la barrita */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -255,61 +268,62 @@ ul {
   bottom: 0;
   width: 0%;
   height: 2px;
-  background-color: #0d6efd; /* color de la barra */
+  background-color: #0d6efd;
   transition: width 0.3s ease;
 }
 
-/* cuando pasas el mouse */
 .nav-link:hover::after {
   width: 100%;
 }
-/* ==================== ANIMACIÓN SCROLL ==================== */
 
-/* Estado inicial (invisible) */
+/* Animación scroll */
 .animar {
-    opacity: 0;
-    transform: translateY(60px);
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Estado visible (animado) */
 .animar.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Puedes agregar diferentes delays para que no aparezcan todas al mismo tiempo */
-.cards-conocimientos {
-    transition-delay: 100ms;
-}
+/* Delays para animaciones */
+.cards-conocimientos { transition-delay: 100ms; }
+#proyectos { transition-delay: 200ms; }
+#contacto { transition-delay: 300ms; }
 
-#proyectos {
-    transition-delay: 200ms;
-}
-
-#contacto {
-    transition-delay: 300ms;
-}
-.card-conocimientos.animar {
-    transition-delay: 100ms;
-}
-
+.card-conocimientos.animar { transition-delay: 100ms; }
 .card-conocimientos.animar:nth-child(2) { transition-delay: 200ms; }
 .card-conocimientos.animar:nth-child(3) { transition-delay: 300ms; }
 .card-conocimientos.animar:nth-child(4) { transition-delay: 400ms; }
 .card-conocimientos.animar:nth-child(5) { transition-delay: 500ms; }
-/* tablet */
-@media (min-width: 768px) and (max-width: 991.98px){
+
+/* ============================================
+   MEDIA QUERIES
+============================================ */
+
+/* Celular */
+@media (max-width: 575.98px) {
   .foto-axel {
     display: none;
+  }
 }
-.foto-hero{
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .foto-axel {
+    display: none;
+  }
+  
+  .foto-hero {
     width: 180px;
     position: relative;
     top: 80px;
     right: 250px;
   }
-   .tienes-un-proyecto{
+  
+  .tienes-un-proyecto {
     bottom: 0;
   }
 }
