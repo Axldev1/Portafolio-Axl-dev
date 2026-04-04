@@ -46,8 +46,7 @@ ul {
     padding: 1.5rem;
 }
 .tienes-un-proyecto{
-  position: relative;
-  bottom: 150px;
+  margin-top: 220px;
   height: 270px;
   background-color: #132238;
 }
@@ -61,8 +60,7 @@ ul {
   top: 40px;
 }
 .cards-conocimientos{
-  position: relative;
-  bottom: 100px;
+  margin-top: 150px;
   height: 100%;
 }
 
@@ -234,7 +232,9 @@ ul {
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-
+.proyectos{
+  margin-top: 200px;
+}
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-15px); }
