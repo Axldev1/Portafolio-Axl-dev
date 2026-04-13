@@ -93,8 +93,6 @@
         </div>
     </section>
 
-
-
     <!-- CTA BAND -->
     <section class="cta-band py-5 animar">
         <div class="container">
@@ -118,7 +116,6 @@
             </div>
 
             <div class="row g-4 justify-content-center">
-
                 <div class="col-6 col-md-4 col-lg-2">
                     <div class="skill-card animar text-center">
                         <img src="./images/html-5-svgrepo-com.svg" alt="HTML" class="skill-icon">
@@ -155,7 +152,6 @@
                         <span class="skill-name">WordPress</span>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -169,6 +165,7 @@
                 <div class="title-rule mx-auto mt-3"></div>
             </div>
 
+            <!-- Proyectos siempre visibles -->
             <div class="row g-4">
 
                 <div class="col-md-6 animar">
@@ -192,7 +189,7 @@
                                 <span class="stack-tag">HTML</span>
                                 <span class="stack-tag">CSS</span>
                                 <span class="stack-tag">JavaScript</span>
-                                 <span class="stack-tag">Bootstrap</span>
+                                <span class="stack-tag">Bootstrap</span>
                             </div>
                         </div>
                     </div>
@@ -253,7 +250,7 @@
                 <div class="col-md-6 animar">
                     <div class="project-card h-100">
                         <div class="project-card__img">
-                            <img src="./images/iron forge.png" alt="Latana">
+                            <img src="./images/iron forge.png" alt="IronForge">
                             <div class="project-card__overlay">
                                 <a href="https://axldev-gym.netlify.app/" target="_blank" class="project-link">
                                     <i class="bi bi-box-arrow-up-right"></i> Ver proyecto
@@ -278,6 +275,83 @@
                 </div>
 
             </div>
+            <!-- FIN proyectos visibles -->
+
+            <!-- ===================================================
+                 PROYECTOS EXTRA (ocultos hasta hacer click)
+                 Usamos el mismo wrapper .extra-projects-wrap para
+                 la animación, y adentro un row g-4 IDÉNTICO al de
+                 arriba → las cards quedan exactamente del mismo tamaño
+            =================================================== -->
+            <div id="extraProjects" class="extra-projects-wrap">
+                <div class="row g-4">
+
+                    <!-- PROYECTO 5 — reemplazá imagen, links, título y descripción -->
+                    <div class="col-md-6 animar-extra">
+                        <div class="project-card h-100">
+                            <div class="project-card__img">
+                                <img src="./images/eter.png" alt="Proyecto 5">
+                                <div class="project-card__overlay">
+                                    <a href="https://tu-proyecto-5.netlify.app/" target="_blank" class="project-link">
+                                        <i class="bi bi-box-arrow-up-right"></i> Ver proyecto
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-card__body">
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <span class="project-tag">Landing Page</span>
+                                    <a href="https://tu-proyecto-5.netlify.app/" target="_blank" class="project-arrow"><i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                                <h3 class="project-title">Nombre Proyecto 5</h3>
+                                <p class="project-desc">Descripción del proyecto 5.</p>
+                                <div class="project-stack d-flex gap-2 flex-wrap mt-3">
+                                    <span class="stack-tag">HTML</span>
+                                    <span class="stack-tag">CSS</span>
+                                    <span class="stack-tag">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROYECTO 6 — reemplazá imagen, links, título y descripción -->
+                    <!-- <div class="col-md-6 animar-extra">
+                        <div class="project-card h-100">
+                            <div class="project-card__img">
+                                <img src="./images/tu-imagen-6.png" alt="Proyecto 6">
+                                <div class="project-card__overlay">
+                                    <a href="https://tu-proyecto-6.netlify.app/" target="_blank" class="project-link">
+                                        <i class="bi bi-box-arrow-up-right"></i> Ver proyecto
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-card__body">
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <span class="project-tag">Landing Page</span>
+                                    <a href="https://tu-proyecto-6.netlify.app/" target="_blank" class="project-arrow"><i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                                <h3 class="project-title">Nombre Proyecto 6</h3>
+                                <p class="project-desc">Descripción del proyecto 6.</p>
+                                <div class="project-stack d-flex gap-2 flex-wrap mt-3">
+                                    <span class="stack-tag">HTML</span>
+                                    <span class="stack-tag">CSS</span>
+                                    <span class="stack-tag">Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+            <!-- FIN proyectos extra -->
+
+            <!-- Botón Ver más / Ver menos -->
+            <div class="text-center mt-5 animar" id="showMoreWrap">
+                <button class="btn-show-more" id="btnShowMore">
+                    <span id="btnText">Ver más proyectos</span>
+                    <i class="bi bi-chevron-down ms-2" id="btnIcon"></i>
+                </button>
+            </div>
+
         </div>
     </section>
 
@@ -296,7 +370,6 @@
 
             <div class="row g-4 animar">
 
-                <!-- Formulario -->
                 <div class="col-lg-7">
                     <div class="contact-form-card">
                         <form id="contactForm" action="https://formspree.io/f/xzdjalpo" method="POST">
@@ -329,7 +402,6 @@
                     </div>
                 </div>
 
-                <!-- Info -->
                 <div class="col-lg-5">
                     <div class="contact-info-card h-100">
                         <h4 class="info-title mb-4">Otras formas de contactarme</h4>

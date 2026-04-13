@@ -20,21 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             } else {
-                // Reinicia la animación cuando el elemento sale de la vista (al subir)
                 if (window.scrollY < entry.target.getBoundingClientRect().top + window.scrollY) {
                     entry.target.classList.remove('visible');
                 }
             }
         });
     }, {
-        threshold: 0.15,           // Se activa un poco antes
+        threshold: 0.15,
         rootMargin: '-50px 0px -80px 0px'
     });
 
     animEls.forEach(el => {
         observer.observe(el);
-        
-        // Forzar reinicio inicial
         el.classList.remove('visible');
     });
 });
@@ -112,6 +109,55 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.style.background = '';
                 btn.disabled = false;
             }, 3000);
+        }
+    });
+});
+
+// ============================================
+//  VER MÁS / VER MENOS PROYECTOS
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+    const btn     = document.getElementById('btnShowMore');
+    const extra   = document.getElementById('extraProjects');
+    const btnText = document.getElementById('btnText');
+
+    if (!btn || !extra) return;
+
+    let expanded = false;
+
+    btn.addEventListener('click', () => {
+        expanded = !expanded;
+
+        if (expanded) {
+            extra.classList.add('expanded');
+            btn.classList.add('expanded');
+            btnText.textContent = 'Ver menos proyectos';
+
+            // Activar animaciones de entrada con pequeño delay
+            setTimeout(() => {
+                extra.querySelectorAll('.animar-extra').forEach((el, i) => {
+                    setTimeout(() => el.classList.add('visible'), i * 100);
+                });
+            }, 80);
+
+        } else {
+            extra.classList.remove('expanded');
+            btn.classList.remove('expanded');
+            btnText.textContent = 'Ver más proyectos';
+
+            // Resetear animaciones para la próxima apertura
+            extra.querySelectorAll('.animar-extra').forEach(el => {
+                el.classList.remove('visible');
+            });
+
+            // Scroll suave al inicio de la sección proyectos
+            const section = document.getElementById('proyectos');
+            if (section) {
+                window.scrollTo({
+                    top: section.getBoundingClientRect().top + window.scrollY - 80,
+                    behavior: 'smooth'
+                });
+            }
         }
     });
 });
